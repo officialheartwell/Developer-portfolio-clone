@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Prata&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+} 
+
+#container{
+    background-color: #000;
+    color: #e1e1e1;
+    position: relative;
+}
+
+.logo{ 
+    font-weight: 100;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.logo:hover{
+    transition: 0.4s;
+    transform: scale(1.12);
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    line-height: 60px;
+    align-items: center;
+}
+.navbar li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 20px;
+}
+.navbar a{
+    text-decoration: none;
+    color: #c7c7c7;
+    font-size: 17px;
+}
+.navbar a:hover, .active{
+    color: #fff;
+    border-bottom: 3px solid yellow;
+}
+
+.btn{
+    padding: 6px 14px;
+    background-color: rgba(255, 255, 0, 0.8);
+    opacity: 0.8;
+    border: 2px solid #000;
+    outline: 2px solid white;
+    outline-offset: 1px;
+    font-family: 'Prata', serif;
+    font-size: 17px;
+}
+.btn:hover{
+    background-color: rgba(255, 255, 0, 1.0);
+    cursor: pointer;
+}
+
+.hamburger, .btnclose{
+    display: none;
+}
+
+.content{
+    background: url(../images/background.jpg);
+    background-size: 115%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    padding: 0 6%;
+    min-height: 100vh;
+}
+
+h1{
+    font-size: 3.8rem;
+    color: #fff;
+    width: 60%;
+    font-family: 'Prata', serif;
+    font-weight: 100;
+    animation: title 1s ease 1s both;
+    margin: 0 0 10px;
+}
+@keyframes title {
+    from{transform: translateX(-110%);}
+    to{transform: translateX(0%);}
+}
+
+.intro-p{
+    width: 50%;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif; 
+    animation: paragraph 0.5 linear 1.5s forwards;
+    line-height: 2;
+    color: aliceblue;
+}
+@keyframes paragraph{
+    from{transform: translateY(200%);}
+    to{transform: translateY(-200%);}
+}
+
+/* ============== This is The Main Section (second part)========== */
+#main{
+    margin: 50px 0px 0px;
+    padding: 0px 6%;
+}
+.title-info{
+    margin: 100px 0px 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+h3{
+    font-family: 'Prata', serif;
+    font-weight: 100;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+p{
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* ============= This is the brand section ================== */
+.brands{
+    display: flex;
+    justify-content: space-between;
+}
+.brand:hover{
+    transition: 0.3s;
+    transform: scale(1.4);
+}
+
+.image{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* ================ This is an experience section ================== */
+#experience{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 4rem;
+    padding: 60px 6%;
+    background-color: #2c2e35;
+}
+
+h2{
+    font-family: 'Prata', serif;
+    font-weight: 100;
+    color: #fff;
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+#newsline{
+    width: 100%;
+    padding: 50px 6%;
+}
+
+#newsline p{
+    margin-bottom: 30px;
+    width: 75%;
+}
+
+.btn-2{
+    margin: 10px 0px 10px 0px;
+    padding: 10px 25px;
+    background-color: rgba(255, 255, 0, 0.8);
+    opacity: 0.8;
+    border: 2px solid #fff;
+    outline: 2px solid white;
+    outline-offset: 3px;
+    font-weight: 600;
+    font-family: 'Prata', serif;
+    font-size: 17px;
+}
+.btn-2:hover{
+    background-color: rgba(255, 255, 0, 1.0);
+    cursor: pointer;
+}
+
+#footer{
+    background-color: #2c2e35;
+    padding: 0px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-1{
+    font-weight: 100;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.logo-1:hover{
+     transition: 0.4s;
+     transform: scale(1.12);
+} 
+.icons{
+    margin: 10px 15px 10px 0;
+}
+.icon{
+    margin: 10px 25px 10px 0;
+}
+.icon:hover{
+    transition: 0.3s;
+    transform: scale(1.4);
+}
+
+#footer p{
+    font-size: 0.9rem;
+}
+
+
+
+/* ================= media Query for tablet =================== */
+@media screen and (max-width: 884px) {
+    .content{
+        padding: 10px 3%;
+    }
+    h1{
+        font-size: 4rem;
+        width: 85%; 
+    }
+    .intro-p{
+        font-size: 20px;
+        width: 75%;
+    }
+
+    #main{
+        padding: 0px 4%;
+    }
+    .title-info{
+        display: flex;
+        flex-direction: column;
+        margin: 100px 0px;
+    }
+    h3{
+        font-size: 2.3rem;
+    }
+    p{
+        font-size: 20px;
+    }
+    .yelp{
+        margin-top: 50px;
+    }
+    .brands{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .brand{
+        margin: 20px 60px 0px;
+    }
+    #experience{
+        display: flex;
+        flex-direction: column;
+        gap: 0 4rem;
+        padding: 60px 4%;
+        background-color: #2c2e35;
+    }
+    #newsline p{
+        margin-bottom: 30px;
+        width: 80%;
+    }
+}
+
+
+
+
+/* ===================Media Query for Tablet ipad mini Device================ */
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        opacity: 0.9;
+        overflow-x: hidden;
+        transition: 0.4s;
+    }
+    .btnclose{
+        color: #fff;
+        font-size: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        display: block;
+    }
+    
+    .hamburger{
+        background-color: #000;
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        margin: 15px 10px 0;
+        display: block;
+    } 
+    .logo{
+        transform: translateY(0%);
+        z-index: 1;
+        position: fixed;
+        top: -10px;
+        left: 20px;
+        font-size: 1.3rem;
+    }
+    .navbar ul{
+        padding:  0px 0px 10px 30px;
+        position: absolute;
+        top: 15%;
+        left: 0px;
+    }
+
+    .navbar li{
+        display: block;
+        list-style-type: none;
+        margin: 0px;
+        font-size: 26px;
+    }
+    
+    .btn{
+        position: absolute;
+        left: 40px;
+        bottom: 20%;
+        padding: 10px 25px;
+        background-color: rgba(255, 255, 0, 0.8);
+        opacity: 0.8;
+        border: 2px solid #fff;
+        outline: 2px solid white;
+        outline-offset: 3px;
+        font-size: 20px;
+    }
+    .btn:hover .btn-2{
+        background-color: rgba(255, 255, 0, 1.0);
+    }
+    h1{
+        font-size: 3rem;
+        width: 100%;
+        margin-top: 100px;
+    }
+  
+    p, .intro-p{
+        font-size: 17px;
+        width: 100%;
+    } 
+    .brand{
+        margin: 50px 60px 0px;
+    }   
+}
+
+
+/* ================= Media Query For Mobile Device============= */
+@media screen and (max-width: 428px) {
+    #container{
+       padding: 50px 0 0;  
+    }
+    .content{
+        padding: 10px 3%;
+        display: grid;
+        min-height: 100%;
+    }
+ 
+    /* =========== hamburger menu section ======== */
+    .hamburger{
+        background-color: #000;
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        margin: 15px 10px 0;
+        display: block;
+    } 
+    .btnclose{
+        color: #fff;
+        font-size: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        display: block;
+    }
+
+    /* ============THe side bar navigtion menu ======== */
+    .navbar{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        opacity: 0.9;
+        overflow-x: hidden;
+        transition: 0.4s;
+    }
+
+    .logo{
+        transform: translateY(0%);
+        position: relative;
+        top: -280px;
+        left: 30px;
+        font-size: 1.15rem;
+    }
+    .navbar ul{
+        padding:  0px 0px 10px 30px;
+        position: absolute;
+        top: 15%;
+        left: 0px;
+    }
+
+    .navbar li{
+        display: block;
+        list-style-type: none;
+        margin: 0px;
+        font-size: 22px;
+    }
+    .navbar a{
+        color: grey;
+        text-decoration: none;
+    }
+    .navbar a:hover{
+        color: white;
+        text-decoration: none;
+    }
+    .btn{
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+        padding: 6px 16px;
+        background-color: rgba(255, 255, 0, 0.8);
+        opacity: 0.8;
+        border: 2px solid #fff;
+        outline: 2px solid white;
+        outline-offset: 3px;
+    }
+    .btn:hover .btn-2{
+        background-color: rgba(255, 255, 0, 1.0);
+    }
+
+    #main{
+        padding: 0px 3%;
+    }
+    .title-info{
+        display: flex;
+        flex-direction: column;
+        margin: 100px 0px;
+        padding: 0px 3%;
+    }
+    .brands{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .brand{
+        margin: 20px 30px 0px;
+    }
+
+    .btn-2{
+        padding: 8px 18px;
+    }
+
+    #footer{
+        background-color: #2c2e35;
+        display: flex;
+        flex-direction: column;
+        padding: 100px 0%;
+        padding: 0px 3%;
+    }
+    .logo-1{
+        margin: 10px 0px 0px;
+     }
+
+    .icons{
+        margin: 10px auto;
+        text-align: center;
+    }
+    .icon{
+        margin: 15px ;
+    }
+    .icon:hover{
+        transition: 0.3s;
+        transform: scale(1.4);
+    }
+    
+    #footer p{
+        font-size: 0.8rem;
+    }
+    
+}
